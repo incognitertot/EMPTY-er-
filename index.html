@@ -11,6 +11,27 @@ SAMPLE TEXT
 BOTTOM TEXT
 
 BUTTON
-<button type="button">I am A button YAY</button>
+<button id="counterBtn">Clicks: 0</button>
 
+    <!-- ... Your existing website content is up here ... -->
+
+    <!-- 1. PASTE THE BUTTON WHERE YOU WANT IT TO APPEAR -->
+    <button id="counterBtn">Clicks: 0</button>
+
+    <!-- ... Maybe more of your existing content ... -->
+
+
+    <!-- 2. PASTE THIS SCRIPT AT THE VERY BOTTOM OF THE FILE -->
+    <script>
+        let count = 0;
+        const button = document.getElementById('counterBtn');
+
+        button.addEventListener('click', () => {
+            count++; 
+            button.textContent = `Clicks: ${count}`;
+        });
+    </script>
+
+</body> <!-- This is the existing end of your file -->
 </html>
+
